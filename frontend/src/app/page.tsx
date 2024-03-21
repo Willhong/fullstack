@@ -14,9 +14,7 @@ export default function Home() {
     <main className="">
       <div className="">
         <h1>this is main page</h1>
-        <h2>
-          Get started by editing<code>pages/index.js</code>
-        </h2>
+        <h2>Get started by editing</h2>
         <div>
           <ComboboxDropdownMenu />
         </div>
