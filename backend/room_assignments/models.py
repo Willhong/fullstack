@@ -9,9 +9,6 @@ class RoomAssignment(models.Model):
     check_out_time = models.DateTimeField(null=True, blank=True)
     status = models.CharField(max_length=20)
 
-    def __str__(self):
-        return f"Assignment {self.id} for {self.room.room_name}"
-
 
 class RoomAssignmentHistory(models.Model):
     idx = models.AutoField(primary_key=True)

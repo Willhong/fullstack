@@ -22,7 +22,7 @@ class Order(models.Model):
     served_at = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
-        return f"Order {self.id} for {self.product.name}"
+        return f"Order {self.idx} for {self.product.name}"
 
 
 class OrderHistory(models.Model):
