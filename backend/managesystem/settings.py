@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'orders',
     'room_assignments',
     'reports',
+    'graphene_django',
 
 ]
 
@@ -56,6 +57,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+GRAPHENE = {
+    # 여기서 'your_project.schema.schema'는 실제 스키마가 정의된 Python 경로로 변경해야 합니다.
+    'SCHEMA': 'managesystem.schema.schema'
+}
 ROOT_URLCONF = 'managesystem.urls'
 
 TEMPLATES = [
