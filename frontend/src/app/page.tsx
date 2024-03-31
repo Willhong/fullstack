@@ -3,6 +3,7 @@ import ClientHeader from "@/components/ClientHeader";
 import { ComboboxDropdownMenu } from "@/components/Dropdown";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <main className="">
       <div className="">
+        <Breadcrumb></Breadcrumb>
         <h1>this is main page</h1>
         <h2>Get started</h2>
         <div>
