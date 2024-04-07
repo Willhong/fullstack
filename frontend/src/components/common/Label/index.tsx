@@ -1,5 +1,5 @@
 import React from "react";
-import { Label } from "../components/ui/label";
+import { Label } from "../../ui/label";
 import classNames from "classnames";
 
 interface Props extends React.ComponentPropsWithoutRef<typeof Label> {

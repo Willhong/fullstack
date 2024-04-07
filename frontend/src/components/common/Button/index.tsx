@@ -1,6 +1,7 @@
 import React from "react";
-import { Button } from "../components/ui/button";
+import { Button } from "../../ui/button";
 import classNames from "classnames";
+import Spinner from "../Spinner";
 
 interface Props extends React.ComponentPropsWithoutRef<typeof Button> {
   /**
@@ -67,6 +68,7 @@ const button = ({
       {...props}
       className={classNames(
         props.className,
+        "disabled:opacity-50 relative",
         size === "default" && "text-md px-2",
         size === "sm" && "text-sm px-3 py-1",
         size === "lg" && "text-lg px-4 py-2",
@@ -99,7 +101,16 @@ const button = ({
             }
       )}
     >
-      {isLoading ? "로딩중" : children}
+      {isLoading ? (
+        <>
+          <div className="absolute top-0 left-0 h-full w-full flex justify-center items-center">
+            <Spinner size={"md"} />
+          </div>
+          <div className="opacity-0">{children}</div>
+        </>
+      ) : (
+        children
+      )}
     </Button>
   );
 };
